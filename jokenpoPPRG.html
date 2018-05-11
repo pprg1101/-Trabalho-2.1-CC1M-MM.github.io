@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+         jokenpô P.P.R.G.
+      </title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+   </head>
+   <body>
+
+      <div class="texto">
+         <h1 style="text-align: center; font-size: 48px;  " >Jokenpô</h1>
+         <p>
+         <h3 style="text-align: center;  font-size: 25px">
+            <div id="points"><span id="yourscore">Your Score: 0</span>
+               </br></br><span id="gamemasterscore">Game Master Score: 0</span>
+            </div>
+         </h3>
+         </p>
+         <p>
+         <h2 style="text-align: center;font-size: 40px;">Try defeating me!!</h2>
+         </p>
+      </div>
+      <p align=center>
+         <button id=sos onclick="paperrockscissors('Rock')"><img src="https://i.imgflip.com/1ci6za.jpg" alt="Paper" width="380" height="330" ></button>
+         <button id=sos onclick="paperrockscissors('Paper')"><img src="https://img.memecdn.com/stoned-rock_o_2489823.jpg" alt="Scissors" width="380" height="330" ></button>
+         <button id=sos onclick="paperrockscissors('Scissors')"><img src="https://i.imgflip.com/1iz9r1.jpg" alt="Rock" width="380" height="330"></button>
+      </p>
+      <p id="Choices"></p>
+      <p id="wonlosedraw"></p>
+      <script>
+         alert("Hello.")
+         alert("I want to play a game.")
+         alert("Choose paper, rock, or scissors.");
+         
+         
+         
+         
+         		var yourscore = 0;
+         		var gamemasterscore = 0;
+         		
+         		function paperrockscissors(Choice) {
+         			gamemasterchoice = ["Rock", "Paper", "Scissors"][Math.floor(Math.random() * 3)];
+         			
+         			
+         
+         			
+         			if (Choice == gamemasterchoice) {
+         				
+         			
+         			}else 
+         				
+         				if (["RockScissors", "PaperRock", "ScissorsPaper"].indexOf(Choice + gamemasterchoice) != -1) {
+         					yourscore++;
+         					
+         				
+         					
+         					document.getElementById("yourscore").innerHTML = "Your Score: " + yourscore.toString();
+         				
+         				}else{
+         					
+         					gamemasterscore++;
+         					
+         					
+         					document.getElementById("gamemasterscore").innerHTML = "gamemasterscore: " + gamemasterscore.toString();
+         
+         				}
+         
+         			
+         		}
+         		
+         	
+      </script>
+   </body>
+</html>
